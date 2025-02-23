@@ -21,6 +21,12 @@ public class Radiator {
         System.out.println("Weight: " + weight);
         System.out.println("Power: " + power + "W");
     }
+
+    //tworzymy metodę do zamiany mocy W -> kWh
+    double powerInKwh(){
+        return (double) power/1000;
+    }
+
 }
 
 
