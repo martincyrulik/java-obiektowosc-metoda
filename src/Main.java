@@ -8,6 +8,7 @@
 public class Main {
     public static void main(String[] args) {
 
+        //zadanie 1
         char[] red = {'r','e','d'};
         char[] blue = {'b','l','u','e'};
         Radiator r1 = new Radiator(red, 55, 1025);
@@ -57,7 +58,8 @@ public class Main {
         radiators[1].weight = 119;
         radiators[1].display();     //
 
-        //wyświetlmy moc kaloryfera radiators[1] w kWh
+        //Zadanie 2
+        //wyświetlmy moc kaloryfera w kWh
         double powerInKwh = radiators[1].powerInKwh();
         //System.out.println("Power kWh: " + powerInKwh + "kWh");
         if (powerInKwh >= 5){
@@ -65,5 +67,19 @@ public class Main {
         } else {
             System.out.println("Low-power radiator.");
         }
+
+        /**
+         * Zadanie 3 Mini kalkulator #5
+         * Napisz program umożliwiający wykonywanie operacji dodawania i odejmowania
+         * dwóch oraz pięciu dowolnych liczb.
+         */
+        System.out.println("------------");
+        Calculator c = new Calculator();
+        int sum = c.sum(4, 5);
+        System.out.println("4 + 5 = " + sum);
+        sum = c.sum(100, 54);
+        System.out.println("100 + 54 = " + sum);
+        System.out.println("-123 + 4 = " + c.sum(-123, 4));
+        System.out.println("5+1+5+1+5 = " + c.sum5Arguments(5,1, 5,1,5));
     }
 }
